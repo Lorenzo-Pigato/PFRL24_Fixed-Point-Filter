@@ -21,10 +21,10 @@ architecture CSA of CSA is
 
     component FA is
         port(
-            CIN   : in std_logic;
-            X     : in std_logic; 
-            Y     : in std_logic; 
-            COUT  : out std_logic;
+            C_IN   : in std_logic;
+            A     : in std_logic; 
+            B     : in std_logic; 
+            C_OUT  : out std_logic;
             S     : out std_logic
         );
     end component;
@@ -33,32 +33,32 @@ architecture CSA of CSA is
       gen_carry_save : for I in 0 to N - 1 generate
             carry_save : FA 
                   port map(
-                        X     => A (I),
-                        Y     => B (I),
-                        CIN   => C (I),
-                        COUT  => CS(I),
-                        S     => T (I)
+                        A      => A (I),
+                        B      => B (I),
+                        C_IN   => C (I),
+                        C_OUT  => CS(I),
+                        S      => T (I)
                   );
       end generate gen_carry_save;
     
       gen_full_adder : for I in 0 to N - 2 generate
             full_adder : FA
                   port map(
-                        X     => CS(I),
-                        Y     => T(I + 1),
-                        CIN   => C_IN(I),
-                        COUT  => C_IN(I + 1),
+                        A     => CS(I),
+                        B     => T(I + 1),
+                        C_IN   => C_IN(I),
+                        C_OUT  => C_IN(I + 1),
                         S     => Z(I + 1)
                   );
       end generate gen_full_adder;
       
       last_full_adder : FA 
             port map(
-                  X     => CS(N - 1), 
-                  Y     => '0',	 			-- one of last full adder's operand must be set to '0' and 
-                  CIN   => C_IN(N - 1),                     
-                  S     => Z(N),          
-                  COUT  => Z(N + 1)       -- carry output is CSA's MSB
+                  A      => CS(N - 1), 
+                  B      => '0',	 			-- one of last full adder's operand must be set to '0' and 
+                  C_IN   => C_IN(N - 1),                     
+                  S      => Z(N),          
+                  C_OUT  => Z(N + 1)       -- carry output is CSA's MSB
             );
       
       C_IN(0) <= '0';

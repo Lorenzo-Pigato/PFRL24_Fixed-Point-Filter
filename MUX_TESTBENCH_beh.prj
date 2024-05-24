@@ -1,0 +1,3 @@
+vhdl work "MUX2.vhd"
+vhdl work "MUX.vhd"
+vhdl work "MUX_TESTBENCH.vhd"

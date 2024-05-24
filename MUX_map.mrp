@@ -10,7 +10,7 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri May 24 13:37:46 2024
+Mapped Date    : Fri May 24 15:51:34 2024
 
 Design Summary
 --------------
@@ -18,21 +18,21 @@ Number of errors:      0
 Number of warnings:    0
 Slice Logic Utilization:
   Number of Slice Registers:                     0 out of  18,224    0%
-  Number of Slice LUTs:                         32 out of   9,112    1%
-    Number used as logic:                       32 out of   9,112    1%
-      Number using O6 output only:              32
+  Number of Slice LUTs:                          4 out of   9,112    1%
+    Number used as logic:                        4 out of   9,112    1%
+      Number using O6 output only:               4
       Number using O5 output only:               0
       Number using O5 and O6:                    0
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
 
 Slice Logic Distribution:
-  Number of occupied Slices:                     8 out of   2,278    1%
+  Number of occupied Slices:                     4 out of   2,278    1%
   Number of MUXCYs used:                         0 out of   4,556    0%
-  Number of LUT Flip Flop pairs used:           32
-    Number with an unused Flip Flop:            32 out of      32  100%
-    Number with an unused LUT:                   0 out of      32    0%
-    Number of fully used LUT-FF pairs:           0 out of      32    0%
+  Number of LUT Flip Flop pairs used:            4
+    Number with an unused Flip Flop:             4 out of       4  100%
+    Number with an unused LUT:                   0 out of       4    0%
+    Number of fully used LUT-FF pairs:           0 out of       4    0%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -43,7 +43,7 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       131 out of     232   56%
+  Number of bonded IOBs:                        18 out of     232    7%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -68,11 +68,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                1.71
+Average Fanout of Non-Clock Nets:                1.33
 
 Peak Memory Usage:  653 MB
-Total REAL time to MAP completion:  11 secs 
-Total CPU time to MAP completion:   11 secs 
+Total REAL time to MAP completion:  3 secs 
+Total CPU time to MAP completion:   3 secs 
 
 Table of Contents
 -----------------
@@ -98,14 +98,12 @@ Section 2 - Warnings
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network MUX_X<255> has no load.
-INFO:LIT:395 - The above info message is repeated 159 more times for the
-   following (max. 5 shown):
-   MUX_X<254>,
-   MUX_X<253>,
-   MUX_X<252>,
-   MUX_X<251>,
-   MUX_X<250>
+INFO:LIT:243 - Logical network MUX_X<15> has no load.
+INFO:LIT:395 - The above info message is repeated 3 more times for the following
+   (max. 5 shown):
+   MUX_X<14>,
+   MUX_X<13>,
+   MUX_X<12>
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
@@ -134,7 +132,6 @@ Section 6 - IOB Properties
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | MUX_S<0>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | MUX_S<1>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_S<2>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | MUX_X<0>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | MUX_X<1>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | MUX_X<2>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
@@ -147,122 +144,10 @@ Section 6 - IOB Properties
 | MUX_X<9>                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | MUX_X<10>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | MUX_X<11>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<12>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<13>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<14>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<15>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<16>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<17>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<18>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<19>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<20>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<21>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<22>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<23>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<24>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<25>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<26>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<27>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<28>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<29>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<30>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<31>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<32>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<33>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<34>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<35>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<36>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<37>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<38>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<39>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<40>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<41>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<42>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<43>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<44>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<45>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<46>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<47>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<48>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<49>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<50>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<51>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<52>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<53>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<54>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<55>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<56>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<57>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<58>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<59>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<60>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<61>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<62>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<63>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<64>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<65>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<66>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<67>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<68>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<69>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<70>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<71>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<72>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<73>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<74>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<75>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<76>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<77>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<78>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<79>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<80>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<81>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<82>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<83>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<84>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<85>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<86>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<87>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<88>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<89>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<90>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<91>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<92>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<93>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<94>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| MUX_X<95>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | MUX_Y<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | MUX_Y<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | MUX_Y<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | MUX_Y<3>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<4>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<5>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<6>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<7>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<8>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<9>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<10>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<11>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<12>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<13>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<14>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<15>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<16>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<17>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<18>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<19>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<20>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<21>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<22>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<23>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<24>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<25>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<26>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<27>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<28>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<29>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<30>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MUX_Y<31>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

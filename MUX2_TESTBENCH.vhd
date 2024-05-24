@@ -24,9 +24,9 @@ architecture TEST of MUX2_TESTBENCH is
  	--Outputs
    signal Y : std_logic_vector(4 downto 0);
  
-BEGIN
+begin
  
-   uut: MUX2 PORT MAP (
+   uut: MUX2 port map (
           X0 => X0,
           X1 => X1,
           S => S,
@@ -48,9 +48,7 @@ BEGIN
 		wait for 100 ns;	
 		S <= '0';
 
-      -- insert stimulus here 
-
       wait;
    end process;
 
-END;
+end;

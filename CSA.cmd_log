@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/CSA.xst" -ofn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/CSA.syr" 
+xst -intstyle ise -ifn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/CSA.xst" -ofn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/CSA.syr" 
+xst -intstyle ise -ifn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/CSA.xst" -ofn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/CSA.syr" 
+xst -intstyle ise -ifn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/CSA.xst" -ofn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/CSA.syr" 

@@ -5,14 +5,14 @@ Parameter TMPDIR set to /home/lorenzo/Documents/Code/Reti/SecondOrderFilter/xst/
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.01 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to /home/lorenzo/Documents/Code/Reti/SecondOrderFilter/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.01 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: CSA.prj
@@ -51,7 +51,7 @@ Parsing architecture <CSA> of entity <csa>.
 
 
 Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 2.12 secs
+Total CPU time to Xst completion: 2.10 secs
  
 --> 
 

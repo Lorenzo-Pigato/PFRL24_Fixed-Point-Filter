@@ -1,7 +1,7 @@
 set -tmpdir "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/xst/projnav.tmp"
 set -xsthdpdir "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/xst"
 run -compileonly yes
--p xc6slx4-3-tqg144
+-p xc6slx16-3-csg324
 -top CSA
 -opt_mode Speed
 -opt_level 1

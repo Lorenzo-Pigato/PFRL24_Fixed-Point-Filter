@@ -1,0 +1,3 @@
+vhdl isim_temp "MUX2.vhd"
+vhdl isim_temp "MUX.vhd"
+vhdl isim_temp "MUX_TESTBENCH.vhd"

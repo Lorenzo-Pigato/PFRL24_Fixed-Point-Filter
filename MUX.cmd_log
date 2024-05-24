@@ -36,3 +36,14 @@ ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 MUX.ngc MU
 map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MUX_map.ncd MUX.ngd MUX.pcf 
 par -w -intstyle ise -ol high -mt off MUX_map.ncd MUX.ncd MUX.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MUX.twx MUX.ncd -o MUX.twr MUX.pcf 
+xst -intstyle ise -ifn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX.xst" -ofn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 MUX.ngc MUX.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MUX_map.ncd MUX.ngd MUX.pcf 
+par -w -intstyle ise -ol high -mt off MUX_map.ncd MUX.ncd MUX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MUX.twx MUX.ncd -o MUX.twr MUX.pcf 
+xst -intstyle ise -ifn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX.xst" -ofn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX.syr" 
+xst -intstyle ise -ifn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX.xst" -ofn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 MUX.ngc MUX.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MUX_map.ncd MUX.ngd MUX.pcf 
+par -w -intstyle ise -ol high -mt off MUX_map.ncd MUX.ncd MUX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MUX.twx MUX.ncd -o MUX.twr MUX.pcf 

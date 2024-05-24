@@ -52,7 +52,7 @@ begin
 					 X0 => SIG_MUX2_INS((I * N_BIT + N_BIT * 2) - 1 downto (I * N_BIT + N_BIT)),
 					 X1 => SIG_MUX2_INS((I * N_BIT + N_BIT * 3) - 1 downto (I * N_BIT + N_BIT * 2)),
                 S  => SIG_SELECTOR(I),
-					 Y  => SIG_MUX2_INS(((I - 1) * N_BIT + 32) - 1 downto ((I - 1) * N_BIT))
+					 Y  => SIG_MUX2_INS(((I - 1) * N_BIT + N_BIT) - 1 downto ((I - 1) * N_BIT))
             );
     end generate gen_mux2;
 
@@ -60,7 +60,7 @@ begin
     process(MUX_S)
     begin
         for I in 1 to S_BIT - 1 loop
-            for K in 0 to 2 ** I loop
+            for K in 0 to 2 ** I - 1 loop
                 SIG_SELECTOR(K + 2 ** (I - 1)) <= MUX_S(I);
             end loop;
         end loop;

@@ -18,7 +18,8 @@ architecture MUX2 of MUX2 is
 	begin
 	with S select 
 		Y <= X0 when '0',
-			  X1 when '1';
+			  X1 when '1',
+			  (others => '-') when others;
 
 end MUX2;
 

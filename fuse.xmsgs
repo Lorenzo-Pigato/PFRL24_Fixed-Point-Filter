@@ -5,23 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX.vhd" Line 11: Syntax error near &quot;<arg fmt="%s" index="1">array</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="374" delta="unknown" >"/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX.vhd" Line 17: Entity &lt;<arg fmt="%s" index="1">mux</arg>&gt; is not yet compiled.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX.vhd" Line 21: Syntax error near &quot;<arg fmt="%s" index="1">port</arg>&quot;.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1174" delta="unknown" >"/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX.vhd" Line 30: Illegal syntax for subtype indication
-</msg>
-
-<msg type="error" file="HDLCompiler" num="40" delta="unknown" >"/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX.vhd" Line 37: <arg fmt="%s" index="1">mux2</arg> is not a <arg fmt="%s" index="2">component</arg>
-</msg>
-
-<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX.vhd" Line 48: &lt;<arg fmt="%s" index="1">mux_y</arg>&gt; is not declared.
-</msg>
-
 </messages>
 

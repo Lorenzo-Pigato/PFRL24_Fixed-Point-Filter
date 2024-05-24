@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: MUX.prj
@@ -129,15 +129,15 @@ Elaborating entity <MUX2> (architecture <MUX2>) with generics from library <work
 
 Synthesizing Unit <MUX>.
     Related source file is "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX.vhd".
-        N_BIT = 32
-        S_BIT = 3
+        N_BIT = 4
+        S_BIT = 2
     Summary:
 	no macro.
 Unit <MUX> synthesized.
 
 Synthesizing Unit <MUX2>.
     Related source file is "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX2.vhd".
-        N = 32
+        N = 4
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <MUX2> synthesized.
@@ -146,8 +146,8 @@ Unit <MUX2> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Multiplexers                                         : 7
- 32-bit 2-to-1 multiplexer                             : 7
+# Multiplexers                                         : 3
+ 4-bit 2-to-1 multiplexer                              : 3
 
 =========================================================================
 
@@ -160,8 +160,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multiplexers                                         : 7
- 32-bit 2-to-1 multiplexer                             : 7
+# Multiplexers                                         : 3
+ 4-bit 2-to-1 multiplexer                              : 3
 
 =========================================================================
 
@@ -202,11 +202,11 @@ Top Level Output File Name         : MUX.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 32
-#      LUT6                        : 32
-# IO Buffers                       : 131
-#      IBUF                        : 99
-#      OBUF                        : 32
+# BELS                             : 4
+#      LUT5                        : 4
+# IO Buffers                       : 18
+#      IBUF                        : 14
+#      OBUF                        : 4
 
 Device utilization summary:
 ---------------------------
@@ -215,19 +215,19 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   32  out of   9112     0%  
-    Number used as Logic:                32  out of   9112     0%  
+ Number of Slice LUTs:                    4  out of   9112     0%  
+    Number used as Logic:                 4  out of   9112     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     32
-   Number with an unused Flip Flop:      32  out of     32   100%  
-   Number with an unused LUT:             0  out of     32     0%  
-   Number of fully used LUT-FF pairs:     0  out of     32     0%  
+ Number of LUT Flip Flop pairs used:      4
+   Number with an unused Flip Flop:       4  out of      4   100%  
+   Number with an unused LUT:             0  out of      4     0%  
+   Number of fully used LUT-FF pairs:     0  out of      4     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                         291
- Number of bonded IOBs:                 131  out of    232    56%  
+ Number of IOs:                          22
+ Number of bonded IOBs:                  18  out of    232     7%  
 
 Specific Feature Utilization:
 
@@ -262,7 +262,7 @@ Speed Grade: -3
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 6.231ns
+   Maximum combinational path delay: 5.602ns
 
 Timing Details:
 ---------------
@@ -270,22 +270,22 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 192 / 32
+  Total number of paths / destination ports: 20 / 4
 -------------------------------------------------------------------------
-Delay:               6.231ns (Levels of Logic = 3)
+Delay:               5.602ns (Levels of Logic = 3)
   Source:            MUX_S<0> (PAD)
-  Destination:       MUX_Y<31> (PAD)
+  Destination:       MUX_Y<3> (PAD)
 
-  Data Path: MUX_S<0> to MUX_Y<31>
+  Data Path: MUX_S<0> to MUX_Y<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            32   1.222   1.656  MUX_S_0_IBUF (MUX_S_0_IBUF)
-     LUT6:I0->O            1   0.203   0.579  top_mux2/Mmux_Y110 (MUX_Y_0_OBUF)
-     OBUF:I->O                 2.571          MUX_Y_0_OBUF (MUX_Y<0>)
+     IBUF:I->O             4   1.222   1.028  MUX_S_0_IBUF (MUX_S_0_IBUF)
+     LUT5:I0->O            1   0.203   0.579  top_mux2/Mmux_Y41 (MUX_Y_3_OBUF)
+     OBUF:I->O                 2.571          MUX_Y_3_OBUF (MUX_Y<3>)
     ----------------------------------------
-    Total                      6.231ns (3.996ns logic, 2.235ns route)
-                                       (64.1% logic, 35.9% route)
+    Total                      5.602ns (3.996ns logic, 1.606ns route)
+                                       (71.3% logic, 28.7% route)
 
 =========================================================================
 
@@ -295,13 +295,13 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.28 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.13 secs
  
 --> 
 
 
-Total memory usage is 369848 kilobytes
+Total memory usage is 368676 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

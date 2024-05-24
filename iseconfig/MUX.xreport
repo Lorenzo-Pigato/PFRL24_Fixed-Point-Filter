@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2024-05-23T22:25:15</DateModified>
+  <DateModified>2024-05-24T15:52:23</DateModified>
   <ModuleName>MUX</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2024-05-24T15:36:45</SummaryTimeStamp>
   <SavedFilePath>/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/iseconfig/MUX.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/</ImplementationReportsDirectory>
-  <DateInitialized>2024-05-21T14:44:54</DateInitialized>
+  <DateInitialized>2024-05-24T15:48:31</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>
