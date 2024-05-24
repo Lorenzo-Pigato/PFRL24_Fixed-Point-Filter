@@ -1,0 +1,2 @@
+vhdl work "SHR.vhd"
+vhdl work "SHR_TESTBENCH.vhd"

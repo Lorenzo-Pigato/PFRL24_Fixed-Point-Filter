@@ -1,0 +1,23 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX2_TESTBENCH_isim_beh.exe -prj /home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX2_TESTBENCH_beh.prj work.MUX2_TESTBENCH 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX2.vhd" into library work
+Parsing VHDL file "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX2_TESTBENCH.vhd" into library work
+Starting static elaboration
+WARNING:HDLCompiler:794 - "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX2.vhd" Line 18: Statement might not cover all choices ; 'others' clause recommended
+Completed static elaboration
+Fuse Memory Usage: 83084 KB
+Fuse CPU Usage: 940 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture mux2 of entity MUX2 [\MUX2(5)\]
+Compiling architecture test of entity mux2_testbench
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 5 VHDL Units
+Built simulation executable /home/lorenzo/Documents/Code/Reti/SecondOrderFilter/MUX2_TESTBENCH_isim_beh.exe
+Fuse Memory Usage: 1173092 KB
+Fuse CPU Usage: 960 ms
+GCC CPU Usage: 500 ms

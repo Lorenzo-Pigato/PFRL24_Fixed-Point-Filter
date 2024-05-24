@@ -15,6 +15,5 @@ architecture FA of FA is
 	begin
 		SUM <= A xor B xor C_IN;
 		C_OUT <= (A and B) or (B and C_IN) or (A and C_IN);
-
 end FA;
 
