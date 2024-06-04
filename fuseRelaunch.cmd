@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/K_SHIFTER_TESTBENCH_isim_beh.exe" -prj "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/K_SHIFTER_TESTBENCH_beh.prj" "work.K_SHIFTER_TESTBENCH" 
+-intstyle "ise" -incremental -lib "secureip" -o "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/C2_TESTBENCH_isim_beh.exe" -prj "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/C2_TESTBENCH_beh.prj" "work.C2_TESTBENCH" 

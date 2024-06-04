@@ -9,9 +9,7 @@ architecture TEST of MUX_TESTBENCH is
 
     -- Component Declaration for the Unit Under Test (UUT)
     component MUX
-        generic (
-            N_BIT : integer := 3
-        );
+        generic (N_BIT : integer := 3);
         port (
             MUX_X  : in  std_logic_vector(N_BIT * 8 - 1 downto 0); 
 				MUX_S  : in  std_logic_vector(2 downto 0);
@@ -27,9 +25,7 @@ architecture TEST of MUX_TESTBENCH is
 begin
     -- Instantiate the Unit Under Test (UUT)
     uut: MUX
-        generic map (
-            N_BIT => 3
-        )
+        generic map (N_BIT => 3)
         port map (
             MUX_X => MUX_X,
             MUX_S => MUX_S,

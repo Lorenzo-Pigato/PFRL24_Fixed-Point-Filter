@@ -1,4 +1,2 @@
-work	"K_SHIFTER.vhd"
-work	"MUX.vhd"
-work	"MUX2.vhd"
-work	"SHR.vhd"
+work	"C2.vhd"
+work	"FA.vhd"

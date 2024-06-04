@@ -6,10 +6,10 @@ entity CSA is
     generic( N : integer := 32 );
     
     port(
-        A : in  std_logic_vector (N - 1 downto 0);
-        B : in  std_logic_vector (N - 1 downto 0);
-        C : in  std_logic_vector (N - 1 downto 0);
-        Z : out std_logic_vector (N + 1 downto 0)
+        A 	: in  std_logic_vector (N - 1 downto 0);
+        B 	: in  std_logic_vector (N - 1 downto 0);
+        C 	: in  std_logic_vector (N - 1 downto 0);
+        SUM : out std_logic_vector (N + 1 downto 0)
     );
 end CSA;
 
@@ -57,7 +57,7 @@ architecture CSA of CSA is
                         B      => T(I + 1),
                         C_IN   => C_IN(I),
                         C_OUT  => C_IN(I + 1),
-                        SUM    => Z(I + 1)
+                        SUM    => SUM(I + 1)
                   );
       end generate gen_full_adder;
       
@@ -65,11 +65,11 @@ architecture CSA of CSA is
             port map(
                   A      => CS(N - 1), 
                   B	    => C_IN(N - 1),                     
-                  SUM    => Z(N),          
-                  C_OUT  => Z(N + 1)       -- carry output is CSA's MSB
+                  SUM    => SUM(N),          
+                  C_OUT  => SUM(N + 1)       -- carry output is CSA's MSB
             );
       
       C_IN(0) <= '0';
-      Z(0)    <= T(0);
+      SUM(0)    <= T(0);
 
 end CSA;
