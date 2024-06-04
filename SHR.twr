@@ -1,0 +1,82 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml SHR.twx SHR.ncd -o SHR.twr SHR.pcf
+
+Design file:              SHR.ncd
+Physical constraint file: SHR.pcf
+Device,package,speed:     xc6slx75,fgg676,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+SHR_IN<1>      |SHR_OUT<0>     |    7.578|
+SHR_IN<2>      |SHR_OUT<1>     |    7.413|
+SHR_IN<3>      |SHR_OUT<2>     |    7.569|
+SHR_IN<4>      |SHR_OUT<3>     |    7.872|
+SHR_IN<5>      |SHR_OUT<4>     |    7.558|
+SHR_IN<6>      |SHR_OUT<5>     |    7.536|
+SHR_IN<7>      |SHR_OUT<6>     |    7.502|
+SHR_IN<8>      |SHR_OUT<7>     |    7.680|
+SHR_IN<9>      |SHR_OUT<8>     |    7.587|
+SHR_IN<10>     |SHR_OUT<9>     |    7.690|
+SHR_IN<11>     |SHR_OUT<10>    |    7.886|
+SHR_IN<12>     |SHR_OUT<11>    |    7.356|
+SHR_IN<13>     |SHR_OUT<12>    |    7.203|
+SHR_IN<14>     |SHR_OUT<13>    |    7.241|
+SHR_IN<15>     |SHR_OUT<14>    |    7.531|
+SHR_IN<16>     |SHR_OUT<15>    |    7.689|
+SHR_IN<17>     |SHR_OUT<16>    |    7.406|
+SHR_IN<18>     |SHR_OUT<17>    |    7.728|
+SHR_IN<19>     |SHR_OUT<18>    |    7.588|
+SHR_IN<20>     |SHR_OUT<19>    |    7.505|
+SHR_IN<21>     |SHR_OUT<20>    |    7.104|
+SHR_IN<22>     |SHR_OUT<21>    |    7.742|
+SHR_IN<23>     |SHR_OUT<22>    |    7.217|
+SHR_IN<24>     |SHR_OUT<23>    |    7.554|
+SHR_IN<25>     |SHR_OUT<24>    |    7.186|
+SHR_IN<26>     |SHR_OUT<25>    |    8.190|
+SHR_IN<27>     |SHR_OUT<26>    |    5.325|
+SHR_IN<28>     |SHR_OUT<27>    |    7.912|
+SHR_IN<29>     |SHR_OUT<28>    |    6.275|
+SHR_IN<30>     |SHR_OUT<29>    |    8.055|
+SHR_IN<31>     |SHR_OUT<30>    |    5.115|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Jun  3 23:14:32 2024 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 462 MB
+
+
+

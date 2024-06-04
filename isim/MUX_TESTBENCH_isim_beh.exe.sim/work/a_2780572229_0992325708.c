@@ -37,7 +37,7 @@ static void work_a_2780572229_0992325708_p_0(char *t0)
     char *t8;
     char *t9;
     char *t10;
-    static char *nl0[] = {&&LAB7, &&LAB7, &&LAB5, &&LAB6, &&LAB7, &&LAB7, &&LAB7, &&LAB7, &&LAB7};
+    static char *nl0[] = {&&LAB7, &&LAB7, &&LAB6, &&LAB5, &&LAB7, &&LAB7, &&LAB7, &&LAB7, &&LAB7};
 
 LAB0:    t1 = (t0 + 2784U);
     t2 = *((char **)t1);

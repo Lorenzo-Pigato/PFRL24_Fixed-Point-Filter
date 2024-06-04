@@ -1,0 +1,5 @@
+vhdl isim_temp "MUX2.vhd"
+vhdl isim_temp "SHR.vhd"
+vhdl isim_temp "MUX.vhd"
+vhdl isim_temp "K_SHIFTER.vhd"
+vhdl isim_temp "K_SHIFTER_TESTBENCH.vhd"

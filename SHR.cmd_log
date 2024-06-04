@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/SHR.xst" -ofn "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/SHR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-fgg676-3 SHR.ngc SHR.ngd  
+map -intstyle ise -p xc6slx75-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SHR_map.ncd SHR.ngd SHR.pcf 
+par -w -intstyle ise -ol high -mt off SHR_map.ncd SHR.ncd SHR.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SHR.twx SHR.ncd -o SHR.twr SHR.pcf 

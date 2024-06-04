@@ -1,0 +1,5 @@
+vhdl work "MUX2.vhd"
+vhdl work "SHR.vhd"
+vhdl work "MUX.vhd"
+vhdl work "K_SHIFTER.vhd"
+vhdl work "K_SHIFTER_TESTBENCH.vhd"

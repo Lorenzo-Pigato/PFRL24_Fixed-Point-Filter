@@ -1,7 +1,10 @@
-set -tmpdir "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/xst/projnav.tmp"
-set -xsthdpdir "/home/lorenzo/Documents/Code/Reti/SecondOrderFilter/xst"
-run -compileonly yes
--p xc6slx4-3-tqg144
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn SHR.prj
+-ofn SHR
+-ofmt NGC
+-p xc6slx75-3-fgg676
 -top SHR
 -opt_mode Speed
 -opt_level 1
@@ -47,4 +50,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn SHR.prj
