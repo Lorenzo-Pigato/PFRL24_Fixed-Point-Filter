@@ -9,9 +9,13 @@ entity SHR is
         SHR_IN  : in  std_logic_vector (N - 1 downto 0);
         SHR_OUT : out std_logic_vector (N - 1 downto 0)
     );
+	 
+	 signal SIG_MSB : std_logic;
+	 
 end SHR;
 
-architecture RTL of SHR is
+architecture SHR of SHR is
 begin
-    SHR_OUT <= '0' & SHR_IN(N - 1 downto 1);
-end RTL;
+	 SIG_MSB <= SHR_IN(N - 1);
+    SHR_OUT <= SIG_MSB & SHR_IN(N - 1 downto 1);
+end SHR;

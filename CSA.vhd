@@ -70,6 +70,6 @@ architecture CSA of CSA is
             );
       
       C_IN(0) <= '0';
-      SUM(0)    <= T(0);
+      SUM(0)  <= T(0);
 
 end CSA;

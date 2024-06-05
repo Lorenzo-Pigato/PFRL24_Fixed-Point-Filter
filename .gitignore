@@ -1,5 +1,5 @@
 *.*
-/.vscode
-/iseconfig/**
+.vscode/
+iseconfig/
 !.gitignore
 !./*.vhd

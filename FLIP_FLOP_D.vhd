@@ -13,7 +13,7 @@ end D_FLIP_FLOP;
 
 architecture D_FLIP_FLOP of D_FLIP_FLOP is
 begin
-	FF: process( CLK )
+	FF: process( CLK, RESET )
 		begin
 			if( RESET = '1' ) then
 			Q <= '0';
