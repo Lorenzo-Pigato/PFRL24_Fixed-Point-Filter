@@ -62,6 +62,15 @@ architecture FILTER of FILTER is
 		);
 	 end component;	 
 	 
+	 component SR_LATCH is
+		port( 
+			S: in std_logic;
+			R: in std_logic;
+			Q: out std_logic
+		);
+	end component;
+
+	 
 	 signal SIG_RST_OUT 	: std_logic;
 	 signal SIG_RST_REG  : std_logic;
 	 
@@ -80,8 +89,8 @@ architecture FILTER of FILTER is
 	 signal SIG_CSA_OUT		: std_logic_vector(33 downto 0);
 	 signal SIG_LOOPBACK 	: std_logic_vector(31 downto 0);
 	 
-	 signal SIG_VALID 		: std_logic;
-	 signal SIG_VALID_K 		: std_logic_vector(2 downto 0);
+	 signal SIG_INVALID_K 	: std_logic_vector(2 downto 0);
+	 signal SIG_INVALID		: std_logic;
 	 
 	 signal NOT_INIT			: std_logic;
 begin
@@ -154,15 +163,23 @@ begin
 		
 	 clk_gate: CLOCK_GATE
 		port map(
-				EN				=> NOT_INIT,
-				CLK_IN		=>	CLK,
-				CLK_OUT		=>	SIG_CLK,
-				NOT_CLK_OUT	=>	SIG_NOT_CLK
-			);
-		
-	 VALID 		 <= SIG_VALID;
-	 SIG_VALID_K <= K xnor SIG_K_TO_SHIFT;
-	 SIG_VALID 	 <= SIG_VALID_K(0) and SIG_VALID_K(1) and SIG_VALID_K(2) and (not(INIT or RESET));
+			EN				=> NOT_INIT,
+			CLK_IN		=>	CLK,
+			CLK_OUT		=>	SIG_CLK,
+			NOT_CLK_OUT	=>	SIG_NOT_CLK
+		);
+			
+			
+	 SIG_INVALID_K <= K xor SIG_K_TO_SHIFT;		
+	 SIG_INVALID 	<= (SIG_INVALID_K(0) or SIG_INVALID_K(1) or SIG_INVALID_K(2) or RESET);
+	 valid_latch: SR_LATCH
+		port map(
+			S		=> INIT,
+			R		=> SIG_INVALID,
+			Q		=> VALID
+		);
+	 
+	 
 	 
 	 SIG_RST_OUT <= INIT or RESET;
 	 SIG_RST_REG <= RESET;

@@ -62,15 +62,17 @@ begin
 		RESET <= '1';
       wait for 100 ns;	
 		RESET <= '0';
-		X	  	<= "00000000000000000000100000000000";
-		K    	<= "010";
+		
+		wait for 5 ns;
+		X	  	<= x"1E1F0000";	-- 7711.00, 16 bits integer and 16 mantissa
+		K    	<= "011";
 		INIT 	<= '1';
 		
-      wait for 10 ns;
+      wait for 5 ns;
 		INIT 	<= '0';
 		
 		wait for CLK_period*10;
-		X	  	<= "00000000000000000000000100000000";
+		X		<= x"0D050000";	-- 3333.00
 		
 		wait for CLK_period*10;
 		K		<= "001";
@@ -78,12 +80,11 @@ begin
 		wait for 50 ns;
 		INIT	<= '1';
 		
-		wait for 10 ns;
+		wait for 30 ns;
 		INIT	<= '0';
 		
+		wait;
 		
-		
-
    end process;
 
 END;
