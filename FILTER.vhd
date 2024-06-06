@@ -69,6 +69,15 @@ architecture FILTER of FILTER is
 			Q: out std_logic
 		);
 	end component;
+	
+	component D_FLIP_FLOP
+		port( 
+			CLK :  in   std_logic;
+			D 	 :  in   std_logic;
+			Q	 :  out  std_logic;
+			RESET: in   std_logic
+	   );
+   end component;
 
 	 
 	 signal SIG_RST_OUT 	: std_logic;
@@ -91,6 +100,7 @@ architecture FILTER of FILTER is
 	 
 	 signal SIG_INVALID_K 	: std_logic_vector(2 downto 0);
 	 signal SIG_INVALID		: std_logic;
+	 signal SIG_VALID			: std_logic;
 	 
 	 signal NOT_INIT			: std_logic;
 begin
@@ -176,7 +186,15 @@ begin
 		port map(
 			S		=> INIT,
 			R		=> SIG_INVALID,
-			Q		=> VALID
+			Q		=> SIG_VALID
+		);
+		
+	 valid_reg: D_FLIP_FLOP
+		port map (
+			CLK 	=> SIG_NOT_CLK,
+			D 		=> SIG_VALID,
+			Q		=> VALID,
+			RESET => SIG_RST_REG
 		);
 	 
 	 
