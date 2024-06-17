@@ -61,14 +61,6 @@ architecture FILTER of FILTER is
 			NOT_CLK_OUT	:	out std_logic
 		);
 	 end component;	 
-	 
-	 component SR_LATCH is
-		port( 
-			S: in std_logic;
-			R: in std_logic;
-			Q: out std_logic
-		);
-	end component;
 	
 	component D_FLIP_FLOP
 		port( 
@@ -84,10 +76,8 @@ architecture FILTER of FILTER is
 	 signal SIG_RST_REG  : std_logic;
 	 
 	 signal SIG_ENABLE	: std_logic;
-	 signal SIG_CLK		: std_logic;
-	 signal SIG_NOT_CLK	: std_logic;
 	 
-	 signal SIG_LB_REG_OUT	: std_logic_vector(31 downto 0);
+	 signal SIG_LOOPBACK		: std_logic_vector(31 downto 0);
 	 signal SIG_X_TO_SHIFT	: std_logic_vector(31 downto 0);
 	 signal SIG_C2_TO_SHIFT	: std_logic_vector(31 downto 0);
 	 signal SIG_K_TO_SHIFT	: std_logic_vector(2 downto 0);
@@ -96,10 +86,7 @@ architecture FILTER of FILTER is
 	 signal SIG_X_S_TO_CSA	: std_logic_vector(31 downto 0);
 	 
 	 signal SIG_CSA_OUT		: std_logic_vector(33 downto 0);
-	 signal SIG_LOOPBACK 	: std_logic_vector(31 downto 0);
 	 
-	 signal SIG_INVALID_K 	: std_logic_vector(2 downto 0);
-	 signal SIG_INVALID		: std_logic;
 	 signal SIG_VALID			: std_logic;
 	 
 	 signal NOT_INIT			: std_logic;
@@ -110,7 +97,7 @@ begin
 	 x_reg : REG
 		generic map( N => 32)
 		port map (
-			CLK 	=> SIG_CLK,
+			CLK 	=> CLK,
 			D 		=> X,
 			Q		=> SIG_X_TO_SHIFT,
 			RESET => SIG_RST_REG
@@ -125,18 +112,9 @@ begin
 			RESET => SIG_RST_REG
 		);
 		
-	 loopback_reg : REG
-		generic map( N => 32)
-		port map (
-			CLK 	=> CLK,
-			D 		=> SIG_LOOPBACK,
-			Q		=> SIG_LB_REG_OUT,
-			RESET => SIG_RST_OUT
-		);
-		
 	 twos_compl: C2
 		port map(
-			A 		 => SIG_LB_REG_OUT,
+			A 		 => SIG_LOOPBACK,
 			C2_OUT => SIG_C2_TO_SHIFT
 		);
 	
@@ -158,41 +136,23 @@ begin
 		port map(
         A 	=> SIG_X_S_TO_CSA,
         B 	=> SIG_C2_TO_CSA,
-        C 	=> SIG_LB_REG_OUT,
+        C 	=> SIG_LOOPBACK,
         SUM => SIG_CSA_OUT
 		);
 		
 	 out_reg : REG
 		generic map( N => 32)
 		port map (
-			CLK 	=> SIG_NOT_CLK,
+			CLK 	=> CLK,
 			D 		=> SIG_CSA_OUT(31 downto 0),
 			Q		=> SIG_LOOPBACK,
 			RESET => SIG_RST_OUT
 		);
 		
-	 clk_gate: CLOCK_GATE
-		port map(
-			EN				=> NOT_INIT,
-			CLK_IN		=>	CLK,
-			CLK_OUT		=>	SIG_CLK,
-			NOT_CLK_OUT	=>	SIG_NOT_CLK
-		);
-			
-			
-	 SIG_INVALID_K <= K xor SIG_K_TO_SHIFT;		
-	 SIG_INVALID 	<= (SIG_INVALID_K(0) or SIG_INVALID_K(1) or SIG_INVALID_K(2) or RESET);
-	 valid_latch: SR_LATCH
-		port map(
-			S		=> INIT,
-			R		=> SIG_INVALID,
-			Q		=> SIG_VALID
-		);
-		
 	 valid_reg: D_FLIP_FLOP
 		port map (
-			CLK 	=> SIG_NOT_CLK,
-			D 		=> SIG_VALID,
+			CLK 	=> CLK,
+			D 		=> NOT_INIT,
 			Q		=> VALID,
 			RESET => SIG_RST_REG
 		);

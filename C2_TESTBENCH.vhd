@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity C2_TESTBENCH is
 end C2_TESTBENCH;
  
-architecture TESET of C2_TESTBENCH is 
+architecture TEST of C2_TESTBENCH is 
  
     component C2
 		generic (N : integer := 5);

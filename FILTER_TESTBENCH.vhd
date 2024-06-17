@@ -65,19 +65,17 @@ begin
 		
 		wait for 27 ns;
 		K    	<= "111";
-		X	  	<= x"1E1F0000";	-- 7711.00, 16 bits integer and 16 mantissa
+		X	  	<= x"0D050000";	-- 7711.00, 16 bits integer and 16 mantissa
 		INIT 	<= '1';
 		
-      wait for 100 ns;
+      wait for 50 ns;
 		INIT 	<= '0';
 		
 		wait for CLK_period*10;
-		X		<= x"0D050000";	-- 3333.00
+		X		<= x"1E1F0000";	-- 3333.00
 		
 		wait for CLK_period*10;
 		K		<= "001";
-		
-		wait for 50 ns;
 		INIT	<= '1';
 		
 		wait for 20 ns;
