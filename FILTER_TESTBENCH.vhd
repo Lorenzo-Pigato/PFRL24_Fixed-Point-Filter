@@ -31,7 +31,7 @@ architecture TEST of FILTER_TESTBENCH is
    signal VALID  : std_logic;
 
    -- Clock period definitions
-   constant CLK_period : time := 10 ns;
+   constant CLK_period : time := 40 ns;
  
 begin
    
@@ -63,12 +63,12 @@ begin
       wait for 100 ns;	
 		RESET <= '0';
 		
-		wait for 5 ns;
+		wait for 27 ns;
+		K    	<= "111";
 		X	  	<= x"1E1F0000";	-- 7711.00, 16 bits integer and 16 mantissa
-		K    	<= "011";
 		INIT 	<= '1';
 		
-      wait for 5 ns;
+      wait for 100 ns;
 		INIT 	<= '0';
 		
 		wait for CLK_period*10;
@@ -80,8 +80,12 @@ begin
 		wait for 50 ns;
 		INIT	<= '1';
 		
-		wait for 30 ns;
+		wait for 20 ns;
 		INIT	<= '0';
+		
+		wait for CLK_period*15;
+		X		<= x"FF4D0000";	-- -179.00
+
 		
 		wait;
 		

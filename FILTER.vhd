@@ -119,7 +119,7 @@ begin
 	 k_reg : REG
 		generic map( N => 3)
 		port map (
-			CLK 	=> SIG_CLK,
+			CLK 	=> CLK,
 			D 		=> K,
 			Q		=> SIG_K_TO_SHIFT,
 			RESET => SIG_RST_REG
@@ -128,10 +128,10 @@ begin
 	 loopback_reg : REG
 		generic map( N => 32)
 		port map (
-			CLK 	=> SIG_CLK,
+			CLK 	=> CLK,
 			D 		=> SIG_LOOPBACK,
 			Q		=> SIG_LB_REG_OUT,
-			RESET => SIG_RST_REG
+			RESET => SIG_RST_OUT
 		);
 		
 	 twos_compl: C2
