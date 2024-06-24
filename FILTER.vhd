@@ -51,16 +51,7 @@ architecture FILTER of FILTER is
 			C 	 : in  std_logic_vector (N - 1 downto 0);
 			SUM : out std_logic_vector (N + 1 downto 0)
 		);
-	 end component;
-	 
-	 component CLOCK_GATE is
-		port(
-			EN				:	in std_logic;
-			CLK_IN		:	in std_logic;
-			CLK_OUT		:	out std_logic;
-			NOT_CLK_OUT	:	out std_logic
-		);
-	 end component;	 
+	 end component; 
 	
 	component D_FLIP_FLOP
 		port( 
