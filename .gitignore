@@ -4,3 +4,4 @@ isim/
 iseconfig/
 !.gitignore
 !*.vhd
+!*.c
