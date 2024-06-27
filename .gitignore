@@ -5,3 +5,4 @@ iseconfig/
 !.gitignore
 !*.vhd
 !*.c
+!*.pdf
