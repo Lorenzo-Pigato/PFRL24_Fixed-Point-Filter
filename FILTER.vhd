@@ -70,9 +70,9 @@ architecture FILTER of FILTER is
 	 
 	 signal SIG_LOOPBACK		: std_logic_vector(31 downto 0);
 	 signal SIG_X_TO_SHIFT	: std_logic_vector(31 downto 0);
-	 signal SIG_C2_TO_SHIFT	: std_logic_vector(31 downto 0);
 	 signal SIG_K_TO_SHIFT	: std_logic_vector(2 downto 0);
 	 
+	 signal SIG_L_S_TO_C2	: std_logic_vector(31 downto 0);
 	 signal SIG_C2_TO_CSA	: std_logic_vector(31 downto 0);
 	 signal SIG_X_S_TO_CSA	: std_logic_vector(31 downto 0);
 	 
@@ -103,10 +103,17 @@ begin
 			RESET => SIG_RST_REG
 		);
 		
+	 loopback_shift: K_SHIFTER
+		port map(
+         SH_AMNT => SIG_K_TO_SHIFT,
+         INPUT	  => SIG_LOOPBACK,
+         OUTPUT  => SIG_L_S_TO_C2
+      );
+		
 	 twos_compl: C2
 		port map(
-			A 		 => SIG_LOOPBACK,
-			C2_OUT => SIG_C2_TO_SHIFT
+			A 		 => SIG_L_S_TO_C2,
+			C2_OUT => SIG_C2_TO_CSA
 		);
 	
 	 x_shift: K_SHIFTER
@@ -114,13 +121,6 @@ begin
          SH_AMNT => SIG_K_TO_SHIFT,
          INPUT	  => SIG_X_TO_SHIFT,
          OUTPUT  => SIG_X_S_TO_CSA
-      );
-	
-	 loopback_shift: K_SHIFTER
-		port map(
-         SH_AMNT => SIG_K_TO_SHIFT,
-         INPUT	  => SIG_C2_TO_SHIFT,
-         OUTPUT  => SIG_C2_TO_CSA
       );
 	 
 	 carry_save_adder: CSA
