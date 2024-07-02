@@ -66,8 +66,6 @@ architecture FILTER of FILTER is
 	 signal SIG_RST_OUT 	: std_logic;
 	 signal SIG_RST_REG  : std_logic;
 	 
-	 signal SIG_ENABLE	: std_logic;
-	 
 	 signal SIG_LOOPBACK		: std_logic_vector(31 downto 0);
 	 signal SIG_X_TO_SHIFT	: std_logic_vector(31 downto 0);
 	 signal SIG_K_TO_SHIFT	: std_logic_vector(2 downto 0);

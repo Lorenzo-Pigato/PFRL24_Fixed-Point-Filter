@@ -78,12 +78,11 @@ begin
 		K		<= "001";
 		INIT	<= '1';
 		
-		wait for 20 ns;
+		wait for 50 ns;
 		INIT	<= '0';
 		
 		wait for CLK_period*15;
 		X		<= x"FF4D0000";	-- -179.00
-
 		
 		wait;
 		
