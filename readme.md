@@ -1,6 +1,6 @@
 # readme.md
 
-# Filtro esponenziale fixed-point
+# Filtro esponenziale fixed-point - Voto 27/30
 
 Si progetti un circuito sequenziale per la realizzazione di un filtro esponenziale del secondo ordine. Il sistema riceve una sequenza continua di campioni 𝑋𝑡 rappresentati in virgola fissa su 32 bit in cui 16 bit rappresentano la parte frazionaria e produce in uscita il segnale filtrato 𝑌𝑡 rappresentato con la stessa notazione e calcolato come:
 
