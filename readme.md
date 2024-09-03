@@ -22,3 +22,6 @@ comportamento del filtro non è definito se il coefficiente 𝛼 viene cambiato 
 
 Il sistema deve altresì disporre di un segnale di “inizializzazione” che riporta lo stato del filtro a zero.
 Una volta realizzato il componente, è richiesto di realizzare un test-bench per la simulazione e la verifica del corretto funzionamento nei diversi casi. In particolare, è necessario verificare il comportamento del filtro rispetto alla risposta al gradino. La simulazione deve tenere conto dei ritardi reali del sistema (simulazione Post Place & Route).
+
+NOTA: la specifica è incorretta, l'equazione fornita equivale a quella di un filtro del primo ordine, appare chiaro sviluppando il termine al quadrato e semplificando, come riportato nella relazione.
+L'errore è stato corretto dal professore in seguito alla consegna di questo progetto.
